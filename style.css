@@ -78,10 +78,15 @@ font-size: 24px;
 
 }
 
+.selected {
+    background-color: #f4edba;
+    border-bottom: 1px solid red;
+}
+
 .square {
     border: 1px solid var(--border-quare);
 }
- 
+
 .color-black  { background: var(--color-black); }
 .color-red    { background: var(--color-red); }
 .color-green  { background: var(--color-green); }
