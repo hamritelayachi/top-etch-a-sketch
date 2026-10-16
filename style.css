@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-black: #000000;
+    --color-red: #ff6b6b;
+    --color-green: #6bffb8;
+    --color-purple: #8f6bff;
+    --color-yellow: #ffe600;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 24px;
+}
+
+.flex {
+    display: flex;
+}
+
+.controls, 
+.header {
+    justify-content: space-between;
+}
+
+.header {
+    align-items: center;
+}
+
+.tools, .colors {
+    gap: 16px;
+}
+
+.tool-btn, .color-btn {
+    width: 42px;
+    height: 42px;
+    padding: 5px;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+.reset-btn {
+    padding: 4px 16px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: red;
+}
+ 
+.color-black  { background: var(--color-black); }
+.color-red    { background: var(--color-red); }
+.color-green  { background: var(--color-green); }
+.color-purple { background: var(--color-purple); }
+.color-yellow { background: var(--color-yellow); }
