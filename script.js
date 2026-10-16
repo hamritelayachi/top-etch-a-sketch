@@ -59,6 +59,15 @@ boardSqrs.forEach(sqr => {
 
 })
 
+boardSqrs.forEach(sqr => {
+    sqr.addEventListener('mouseenter', e => {     
+        const sqr = e.target;
+        if (selectedTool === 'eraser') {
+           erase(sqr);
+        }
+    })
+
+})
 
 function createGrid(size) { 
     const sqrWidth = gridContainer.clientWidth / size;
