@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch by he.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+   
+    <div class="header">
+        <h1 class="title">Etch-a-Sketch</h1>
+        <p class="credit">Created by Hamrit Elayachi </p>
+    </div>
+
+    <div class="board" id="board" aria-label="Drawing board">
+    </div>
+
+    <div class="controls">
+        
+    <div class="tools">
+        <button aria-label="pen" class="tool-btn" id="pen">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+            </svg>
+        </button>
+
+        <button aria-label="eraser" class="tool-btn" id="eraser">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+        </button>       
+    </div>
+
+    <div class="colors">
+        <button class="color-btn color-black" data-color="#000000" aria-label="Black"></button>
+        <button class="color-btn color-red" data-color="#ff6b6b" aria-label="Red"></button>
+        <button class="color-btn color-green" data-color="#6bffb8" aria-label="Green"></button>
+        <button class="color-btn color-purple" data-color="#8f6bff" aria-label="Purple"></button>
+        <button class="color-btn color-yellow" data-color="#ffe600" aria-label="Yellow"></button>
+    </div>
+    
+    <button class="reset-btn" id="reset">RESET</button>
+    
+    </div>
+</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
