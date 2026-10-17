@@ -10,7 +10,7 @@ createGrid(16)
 const boardSqrs = document.querySelectorAll('.square');
 let selectedColor = "black";
 let selectedTool = "pen";
-
+let isDrawing = false;
 
 
 function draw(elem, color) {
@@ -48,26 +48,43 @@ resetButton.addEventListener('click', e => {
 })
 
 boardSqrs.forEach(sqr => {
-    sqr.addEventListener('mousedown', e => {     
+    sqr.addEventListener('mouseup', e => {    
+            isDrawing = false;
+    })
+})
+
+
+boardSqrs.forEach(sqr => {
+    sqr.addEventListener('mousedown', e => {    
         const sqr = e.target;
         if (selectedTool === 'pen') {
-            sqr.style.backgroundColor = selectedColor;
+            isDrawing = true;
+            draw(sqr, selectedColor)
         } else {
             erase(sqr);
         }
     })
-
 })
 
 boardSqrs.forEach(sqr => {
     sqr.addEventListener('mouseenter', e => {     
         const sqr = e.target;
-        if (selectedTool === 'eraser') {
-           erase(sqr);
+        if (isDrawing) {
+            draw(sqr, selectedColor);
         }
     })
-
 })
+
+
+boardSqrs.forEach(sqr => {
+    sqr.addEventListener('mousedown', e => {    
+        const sqr = e.target;
+        if (selectedTool === 'eraser') {
+            erase(sqr);
+        } 
+    })
+})
+
 
 function createGrid(size) { 
     const sqrWidth = gridContainer.clientWidth / size;
