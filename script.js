@@ -1,7 +1,7 @@
 
 const gridContainer = document.querySelector('#board');
 const colorButtons = document.querySelectorAll('.color-btn');
-const toolBUttons = document.querySelectorAll('.tool-btn');
+const toolButtons = document.querySelectorAll('.tool-btn');
 const resetButton = document.querySelector('.reset-btn');
 const board = document.querySelector('#board');
 
@@ -29,17 +29,19 @@ function resetGrid() {
 
 colorButtons.forEach( btn => {
     btn.addEventListener('click', e => {
-        const color = e.target.dataset.color;
-        selectedColor = color;
-        console.log(selectedColor);
-                
+        const color = e.target;
+        selectedColor = color.dataset.color;
+        colorButtons.forEach(b => b.classList.remove('selected'));
+        color.classList.add('selected');          
     } )
 })
 
-toolBUttons.forEach( btn => {
+toolButtons.forEach( btn => {
     btn.addEventListener('click', e => {
-        const tool = e.currentTarget.id;
-        selectedTool = tool;
+        const tool = e.currentTarget;
+        selectedTool = tool.id;
+        toolButtons.forEach(b => b.classList.remove('selected'));
+        tool.classList.add('selected');  
     })
 })
 
